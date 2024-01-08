@@ -9,9 +9,8 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import update from "immutability-helper";
 
 function App() {
-  const [heroes, setHeroes] = useState(
-    data.map((hero) => ({ ...hero, id: hero.id.toString() }))
-  );
+  const [heroes, setHeroes] = useState(data)
+  
   const moveItemUp = (id) => {
     const currentIndex = heroes.findIndex((hero) => hero.id === id);
     if (currentIndex > 0) {
